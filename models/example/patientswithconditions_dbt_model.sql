@@ -13,10 +13,9 @@ with
             med.diagnosis_date as diagnosis_date,
             med.status as condition_status
         from
-            dbt - demo - proj.dbt_demo_dataset.ehr_data_external,
+            dbt-demo-proj.dbt_demo_dataset.ehr_data_external,
             unnest(medical_history) as med
     )
 
 select *
 from base
-limit 500
